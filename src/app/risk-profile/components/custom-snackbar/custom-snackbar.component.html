@@ -1,0 +1,7 @@
+<div class="flex space-between align-center">
+    <div class="flex align-center">
+        <mat-icon>{{ data.icon }}</mat-icon>
+        <p>{{ data.message }}</p>
+    </div>
+    <mat-icon class="close" (click)="_snackRef.dismiss()">close</mat-icon>
+</div>

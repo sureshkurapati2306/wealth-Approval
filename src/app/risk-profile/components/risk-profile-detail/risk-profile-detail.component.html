@@ -1,0 +1,38 @@
+<div class="risk">
+  <mat-icon>keyboard_arrow_left</mat-icon>
+  <p class="text">Risk Profile</p>
+</div>
+<div class="risk-profile">
+  <div class="text">
+    <p class="font">Hi Natalie,</p>
+    <p class="p-24">Please review and confirm your risk profile details. You may decline this application if you wish to make changes or approve to proceed with it.</p>
+  </div>
+<mat-card class="custom-card ">
+  <mat-card-title>
+      <span class="details">
+          Risk Profiling Details
+      </span>
+  </mat-card-title>
+  <mat-divider></mat-divider>
+
+  <mat-card-content>
+    <div class="content-details">
+      <div class="investment-understanding">
+          <ng-container *ngFor="let item of rpqQuestionarie | async">
+              <p class="font-14 investment-experience">{{ item.questionNumber }} - {{ item.questionDesc }}</p>
+
+              <h3 class="fix-income">{{ item.optionsDesc }}</h3>
+              <div *ngIf="item.additional === 'P' && getImageId(item.optionsDesc)">
+                  <img [src]="'assets/images/rpq-chart-'+ getImageId(item.optionsDesc) +'.svg'" alt="rpq-chart">
+                  <p class="font-12 disclaimer">Disclaimer: Please note that this chart is for illustrative purposes only. Actual returns and losses may vary.</p>
+              </div>
+          </ng-container>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+<div class="button">
+  <button mat-button class="btn-outline-danger" (click)="decline()">Decline</button>
+  <button mat-button class="btn-danger" [routerLink]="['/risk-profile/application-review/Q']">Approve</button>
+</div>
+</div>

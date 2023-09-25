@@ -1,0 +1,51 @@
+<div class="application-container">
+    <div class="declaration-nav">
+        <div class="nav-back">
+            <p><mat-icon>keyboard_arrow_left</mat-icon> Back</p>
+            <h3>
+                <mat-icon>keyboard_arrow_left</mat-icon>
+                Declaration
+            </h3>
+        </div>
+        
+    </div>
+    <div class="decl-otp">
+    <div class="ensure" *ngIf="trxType === 'S'">
+        <p>To ensure you make an informed decision, please take your time to read the product highlight sheet, prospectus and do click on the link of the various documents before you proceed. </p>
+      </div>
+    <div class="decl-card">
+        <mat-card>
+            <mat-card-title>
+                <div class="checks">
+                    <mat-checkbox [formControl]="declaration" class="checkbox"></mat-checkbox>
+                </div>
+                <div>
+                    Investor’s Declaration and Acknowledgment/ Confirmation
+                </div>
+            </mat-card-title>
+            <mat-card-content>
+                <p class="list-desc">By selecting the checkbox, I confirm that I have read, understood and agree to be bound by the following:</p>
+                <ol class="custom-marker parens-around lower-roman">
+                    <li class="red" (click)="termsAndConditionClick(tnc)" *ngFor="let tnc of termsAndConditionList"><u>{{ tnc.tncName }}</u><span *ngIf="trxType === 'S' && tnc.tncId === 9" class="tnc-gray"><u> (only applicable to investors aged 60 years and above); and</u></span></li>
+                    <li *ngIf="trxType === 'S'">I declare that I am a Sophisticated Investor as defined by Securities Commission Malaysia. </li>
+                </ol>
+                <ng-container *ngIf="trxType === 'S'">
+                    <p class="list-desc">2. I also acknowledge and confirm:</p>
+                    <ol class="custom-marker parens-around lower-roman">
+                        <li>I am a tax resident of Malaysia and do not have any foreign tax residency or US residency status (tax or otherwise);</li>
+                        <li>the key contract terms affecting my obligations in relation to the unit trust fund(s) have been adequately explained to me; and</li>
+                        <li>that the Bank may proceed to debit my account as selected for the purpose of purchase of the unit trust fund(s).</li>
+                    </ol>
+                </ng-container>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="sub-info" *ngIf="trxType === 'S'">
+        <mat-icon>error</mat-icon>
+        <p>Transactions performed after 2pm will be executed on the next business day, which refer to the days on which banks in Kuala Lumpur are open.</p>
+    </div>
+    <div class="otp">
+        <app-application-otp [declaration]="declaration.value ? declaration.value : false" [trxType]="trxType"></app-application-otp>
+    </div>
+    </div>
+</div>

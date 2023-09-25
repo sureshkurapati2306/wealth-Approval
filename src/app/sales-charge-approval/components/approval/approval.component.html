@@ -1,0 +1,19 @@
+<div class="main-Container approve-rd-po">
+    <div claas="sub-Container approve-rd-po">
+        <h4>Adhoc Sales Charge Request Approval</h4>
+    </div>
+    <div class="content-Of-Body approve-rd-po-content">
+        <p>
+            Are you sure you want to approve the sales charge for this application?
+        </p>
+        <p>
+            Application’s Ref ID: <strong>{{ applicationsRef.transactionReferenceId }}</strong>
+        </p>
+        <p>
+            You are not able to undo this confirmation.
+        </p>
+    </div>
+    <div class="btn approve">
+        <button mat-button color="warn" class="approvebtn" (click)="approve()">Yes, I Approve</button>
+    </div>
+</div>

@@ -1,0 +1,79 @@
+.content {
+  h3 {
+    font-size: 1.25rem;
+    line-height: var(--body-line-height);
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    .label {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      line-height: 1.125rem;
+      margin-bottom: 0.25rem;
+      color: var(--n80);
+      font-weight: 600;
+      border-left: none;
+      padding-left: 0.5rem;
+      justify-content: space-between;
+      margin-right: 0.625rem;
+      letter-spacing: 0.08em;
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .buttons {
+    position: relative !important;
+    width: 100% !important;
+    margin: 0rem !important;
+    margin-top: 1rem !important;
+  }
+}
+
+.buttons {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - 2rem);
+  left: 0;
+  margin: 1rem;
+  .btn-text {
+    width: 100%;
+    border-color: var(--r100);
+    padding: 0.75rem 0;
+    border-radius: 0.5rem;
+    line-height: var(--body-line-height);
+    margin-bottom: 1rem;
+    box-shadow: none;
+    &.disabled {
+      background-color: var(--n20);
+      color: var(--n0);
+    }
+
+    &.cancel {
+      border-color: var(--n100);
+    }
+  }
+}
+
+::ng-deep {
+  .description {
+    mat-form-field {
+      textarea.mat-input-element {
+        font-size: 1rem;
+      }
+    }
+    .mat-form-field {
+      width: 100%;
+
+      textarea {
+        box-sizing: border-box;
+        border-radius: 0.5rem;
+        border-color: var(--n60);
+        &:focus {
+          border-color: var(--n60);
+        }
+      }
+    }
+  }
+}

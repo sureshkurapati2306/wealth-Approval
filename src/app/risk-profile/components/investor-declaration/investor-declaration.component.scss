@@ -1,0 +1,186 @@
+.otp-decl{
+    .dec-header{
+        @media only screen and (min-width: 48rem) {
+            background-color: #ffffff;
+            .mat-icon,.title{
+                color: #333739 !important;
+            }
+        }
+        background-color: #333739;
+        .title{
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .title-p{
+            padding: 24px 56px 40px 24px;
+        }
+        .mat-title{
+            padding: 50px 56px 40px 24px;
+            @media only screen and (min-width: 48rem) {
+                padding: 0px 56px 40px 24px !important;
+            }
+        }
+        .mat-icon{
+            position: absolute;
+            right: 20px;
+            top: 22px;
+            color: #ffffff;
+            z-index: 999;
+        }
+    }
+    .dec-content{
+        padding: 24px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        position: relative;
+        top: -33px;
+        h3{
+            font-size: 14px;
+            font-weight: bold;
+            color: #333739;
+            padding-bottom: 18px;
+        }
+        p{
+            font-size: 14px;
+            color: #575a5c;
+            strong{
+                color: #333739 !important;
+            }
+        }
+        ol{
+            padding-left: 18px;
+            li{
+                padding-left: 23px;
+                color:#575a5c;
+            }
+        }
+        .customer-dec{
+            p{
+                font-size: 12px;
+            }
+            ul{
+                padding-left: 15px;
+                li{
+                    font-size: 12px;
+                    padding-left: 23px;
+                    color:#575a5c;
+                    list-style-type: disc;
+                    padding-bottom: 14px;
+                }
+            }
+        }
+        .inv-ack{
+            ul{
+                padding-left: 15px;
+                li{
+                    font-size: 12px;
+                    padding-left: 23px;
+                    color:#575a5c;
+                    list-style-type: disc;
+                    padding-bottom: 14px;
+                }
+            }
+            p{
+                font-size: 12px;
+            }
+            .head{
+                font-weight: bold;
+                color: #333739;
+            }
+        }
+        .undertaking-ack{
+            .title{
+                font-size: 12px;
+                font-weight: bold;
+            }
+            .title-sub{
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .content{
+                font-size: 12px;
+            }
+            ul{
+                padding-left: 15px;
+                li{
+                    font-size: 12px;
+                    padding-left: 23px;
+                    color:#575a5c;
+                    list-style-type: disc;
+                    padding-bottom: 14px;
+                }
+            }
+            
+        }
+
+    }
+}
+
+
+.dec-content:has(.tabs-cimb){
+    padding: 0px;
+}
+
+.mat-tab-header{
+    border: none;
+    @media only screen and (min-width: 48rem) {
+        border: 1px solid rgba(0, 0, 0, 0.12);
+    }
+}
+.mat-tab-labels{
+    .mat-tab-label{
+        background-color: var(--n30);
+        width:50%;
+        color: black;
+        opacity: 1;
+        .mat-tab-label-content{
+            font-weight: bold;
+        }
+        @media only screen and (min-width: 48rem) {
+            width:10%;
+        }
+    }
+    .mat-tab-label:first-child{
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .mat-tab-label:last-child{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        
+    }
+    .mat-tab-label-active:last-child{
+        border-left: none;
+    }
+    .mat-tab-label-active:first-child{
+        border-right: none;
+    }
+    .mat-tab-label-active{
+        background-color: white;
+        border-top-right-radius: 10px;
+        border: 1px solid gray;
+        border-bottom: none;
+    }
+}
+.mat-tab-body-content{
+    padding: 20px;
+}
+
+.table{
+    display: flex;
+    padding-top: 12px;
+    .left{
+        width: 30%;
+        @media only screen and (min-width: 48rem) {
+            width:20%;
+        }
+    }
+    .right{
+        width: 70%;
+    }
+}
+
+.tabs-disc {
+    list-style-type: inherit;
+}

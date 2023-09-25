@@ -1,0 +1,26 @@
+<div class="main-Container remarks-rd-po">
+    <div claas="sub-Container remarks-heading">
+        <h4>Adhoc Sales Charge Request Approval</h4>
+    </div>
+    <div class="content-Of-Body remarks-submit">
+        <p>
+            Are you sure you want to decline this sales charge?
+        </p>
+        <p>
+            Application’s Ref ID: <span class="ref-id">{{ applicationsDeclineRef.transactionReferenceId }}</span>
+        </p>
+        <p>
+            Please enter your justification.You are not able to undo this confirmation.
+        </p>
+        <div class="remark-container">
+            <p class="remark-title">ENTER JUSTIFICATION <span class="count">{{ remarks.value?.length }}/200</span></p>
+            <div *ngIf="panelOpenState" class="text-area-remark">
+                <textarea name="questionText" [formControl]="remarks" maxlength="200"
+                    placeholder="Please justify for declining the request"></textarea>
+            </div>
+            <div class="btn">
+                <button mat-button class="approvebtn" [disabled]="remarks.value?.length === 0" (click)="decline()">Yes, I Decline</button>
+            </div>
+        </div>
+    </div>
+</div>

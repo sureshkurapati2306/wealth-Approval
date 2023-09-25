@@ -1,0 +1,93 @@
+.dec {
+  display: flex;
+  padding: 0.75rem 1.5rem;
+  align-items: center;
+  margin: 0 -0.5rem;
+  background: white;
+  margin-top: -0.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  .text {
+    font-weight: 700;
+    font-size: 1.125rem;
+    color: #45484a;
+    margin-bottom: 0 !important;
+    margin-left: 1.02rem !important;
+  }
+}
+.declaration {
+  .custom-card {
+    .mat-card-title {
+      margin-bottom: 0 !important;
+      .mat-checkbox {
+        .mat-checkbox-layout {
+          .mat-checkbox-inner-container{
+            margin-right: 0.68rem !important;
+          }
+          .mat-checkbox-label {
+            white-space: pre-line !important;
+            width: 267px !important;
+          }
+        }
+      }
+    }
+    .mat-card-content {
+      padding: 1rem 0 0.625rem;
+      .text-content {
+        font-weight: 400;
+        font-size: 0.87rem;
+      }
+      .text {
+        font-weight: 400;
+        font-size: 0.87rem;
+        color: #ff0000;
+        text-align: left;
+        margin-left: 0.875rem;
+      }
+      .mt-16 {
+        margin-top: 1rem;
+      }
+    }
+    .d-flex {
+      display: flex;
+    }
+    .padding {
+      padding: 1rem 1.5rem !important;
+    }
+    .title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: #333739;
+      line-height: 150%;
+    }
+  }
+  .custom-card1 {
+    margin: 1.5rem -0.5rem;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    .d-flex {
+      display: flex;
+      .otp-text {
+        font-weight: 400;
+        font-size: 0.87rem;
+        margin-left: 1.125rem;
+      }
+    }
+  }
+
+  .button {
+    .btn-text {
+      font-weight: 700;
+      font-size: 1rem;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      border-radius: 0.5rem;
+      box-shadow: none;
+      &.disabled {
+        background-color: var(--n20);
+        color: var(--n0);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+::ng-deep { 
+    .otp-input {
+    width: 0.625rem !important;
+    height: 1.125rem !important;
+    border-radius: 0.5rem !important;
+    margin-right: 0.5rem !important;}
+    .otp-container {
+    height: 3.438rem !important;
+    button {
+        visibility: hidden;
+    }
+    }
+    .border_red {
+        input {
+            border-color: red !important;
+        }
+        }
+        .border_black {
+            input {
+                border-color: #7B7D7E !important;
+            }
+        }
+}

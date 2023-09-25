@@ -1,0 +1,27 @@
+.main-div {
+  margin-bottom: 15.125rem;
+  margin-top: 40px;
+  margin-left: 347px;
+  margin-right: 347px;
+
+}
+
+.sub-div {
+  font-size: 1.25rem;
+  font-weight: bold;
+  line-height: 1.4;
+  color: var(--n100);
+}
+
+.content-of-div {
+  height: 3rem;
+  font-size: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--n80);
+  padding-bottom: 2rem;
+  padding-top: 27px;
+  p{
+      font-size: 1rem;
+  }
+}

@@ -1,0 +1,101 @@
+<p class="uts-container">Unit Trust Subscription</p>
+<div class="mainDiv" *ngIf="(approvalSubscribe$ | async), let approvalSubscribed">
+  <p class="customerName">Hi {{approvalSubscribed.customerName}},</p>
+  <div class="reviewConfirm">
+    <p>{{para}}</p>
+  </div>
+  <div>
+    <div class="refgroup">
+      <div class="referenced ref">
+        <div>
+          <p>{{approvalSubscribed.riskName}}</p><span class="toasterpopup">Your Risk Profile</span>
+        </div>
+        <span>{{approvalSubscribed.riskDesc}}</span>
+      </div>
+
+      <mat-divider></mat-divider>
+
+      <div class="referenced ref1">
+        <label>{{approvalSubscribed.settlementAccount}}</label>
+        <p>{{customerId}}</p>
+      </div>
+    </div>
+    <div class="refgroup">
+      <div class="referenced ref ref2">
+        <p>{{approvalSubscribed.transactionType}}</p>
+      </div>
+      <mat-divider></mat-divider>
+      <mat-accordion [togglePosition]="'after'" *ngFor="let data of approvalSubscribed.subscriberDtoList let lastItem = last;">
+        <div class="localEquity">
+          <p class = "colorSpace" [ngStyle]="{'border-left' : '0.25rem solid' + data.colorCode}">{{data.assetClass}}</p>
+          <mat-expansion-panel [expanded]="false" class="exPannel">
+            <mat-expansion-panel-header [expandedHeight]="'100%'">
+              <mat-panel-title>
+                <div class="riskDev">
+                  <div class="paraGroup">
+                    <p class="main">{{data.fundName}}</p>
+                    <div class="assetClass"><span [ngClass]="data.riskDeviation ? 'sub1' : 'sub'">{{data.riskRating | ratingToProfile | uppercase}}</span><span class="inv"> |
+                        {{data.fundIndicator}}</span></div>
+                  </div>
+                  <div class="riskDivision" *ngIf="data.riskDeviation === true">
+                    <div>
+                      <mat-icon>info</mat-icon>
+                    </div>
+                    <div class="riskDev">Risk Deviation</div>
+                  </div>
+                </div>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p class="FD" (click)="openFundDocumentsModal()">Fund Documents</p>
+            <div class="totalYear">
+              <div class="navPrice">
+                <div class="navYear">NAV Price (As of {{data.navUpdatedDate | date:'dd MMMM y'}})</div>
+                <div class="amountPrice"><sup class="amountsDev">{{approvalSubscribed.subscriberDtoList[0].currencyCode}}</sup><span
+                    class="prices">{{data.navPrice | number:'1.6-6'}}</span></div>
+              </div>
+              <div class="navPrice">
+                <div class="navYear">Sales Charge ({{data.salesCharge | number : '1.2-2'}}%)</div>
+                <div class="amountPrice"><sup class="amountsDev">{{approvalSubscribed.subscriberDtoList[0].currencyCode}}</sup><span
+                    class="prices">{{data.salesChargeAmount | number:'1.2-2'}}</span></div>
+              </div>
+            </div>
+          </mat-expansion-panel>
+          <div class="totalYear">
+            <div class="navPrice prices">
+              <div class="navYear navy">Amount</div>
+              <div class="amountPrice fSize"><sup class="amountsDev">{{approvalSubscribed.subscriberDtoList[0].currencyCode}}</sup><span
+                  class="prices prices1">{{data.investmentAmount | number:'1.2-2'}}</span></div>
+            </div>
+          </div>
+        </div>
+        <mat-divider *ngIf="!lastItem"></mat-divider>
+      </mat-accordion>
+    </div>
+    <div class=" referal">
+      <div class="totalYear">
+        <div class="nav-Price">
+          <div class="navYear nprice">Total Investment Amount</div>
+          <div class="amountPrice"><span class="amountsDev">{{approvalSubscribed.subscriberDtoList[0].currencyCode}}</span><span
+              class="prices">{{approvalSubscribed.totalInvestmentAmount | number: '1.2-2'}}</span></div>
+        </div>
+        <div class="nav-Price">
+          <div class="navYear">Total Sales Charges</div>
+          <div class="amountPrice"><span class="amountsDev">{{approvalSubscribed.subscriberDtoList[0].currencyCode}}</span><span
+              class="prices">{{approvalSubscribed.totalSalesCharge | number: '1.2-2'}}</span></div>
+        </div>
+        <mat-divider class="dvdr"></mat-divider>
+        <div class="totalYear">
+          <div class="nav-Price np">
+            <div class="navYear">Total Indicative Amount</div>
+            <div class="amountPrice fSize"><sup class="amountsDev amd">{{approvalSubscribed.subscriberDtoList[0].currencyCode}}</sup><span
+                class="prices prices1">{{ approvalSubscribed.totalIndicativeAmount | number: '1.2-2'}}</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" buttonGroup">
+      <button mat-stroked-button class="declined" (click)="decline()">Decline</button>
+      <button mat-flat-button class="danger" [routerLink]="['/risk-profile/application-review/S']">Approve</button>
+    </div>
+  </div>
+</div>

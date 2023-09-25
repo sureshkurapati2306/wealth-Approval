@@ -1,0 +1,21 @@
+<div class="app-container">
+    <div class="header">
+        <div class="container login-header-container">
+            <div class="inline-flex">
+                <a class="logo" [routerLink]="['/']">
+                   
+                    <img src="assets/logo_preferred.svg" alt="CIMB" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <router-outlet></router-outlet>
+    </div>
+    <footer id="Footer">
+        <p>
+            All rights reserved. Copyright © <br />{{currentYear}} CIMB Bank Berhad 197201001799
+            (13491-P)
+        </p>
+    </footer>
+</div>

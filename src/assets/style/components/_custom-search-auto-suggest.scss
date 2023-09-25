@@ -1,0 +1,153 @@
+.customerSearch {
+    .mat-autocomplete-panel {
+        max-height: 150px;
+        border-radius: 8px !important;
+        line-height: 0px;
+    }
+    .mat-form-field-appearance-outline {
+        .mat-form-field-infix {
+            padding: 2em 0 2em 0 !important;
+        }
+
+        .mat-form-field-flex {
+            padding: 0 1.75em 0 1.75em;
+        }
+
+        .mat-form-field-wrapper {
+            border-radius: 16px;
+            box-shadow: 0 4px 4px -2px rgba(24, 39, 75, 0.08), 0 2px 4px -2px rgba(24, 39, 75, 0.12);
+            background: white;
+            margin: 0;
+        }
+
+        .mat-form-field-prefix {
+            top: -1.75em;
+            margin-right: 1em;
+
+            .active {
+                color: #f44336;
+            }
+        }
+
+        .mat-form-field-outline-start {
+            border: 0;
+            border-radius: 0;
+        }
+
+        .mat-form-field-outline-end {
+            border: 0;
+            border-radius: 0;
+        }
+
+        .mat-form-field-suffix {
+            top: -1.54em;
+            color: #7b7d7e;
+            display: flex;
+            align-items: center;
+            .clearBtn {
+                height: 1.5rem !important;
+                margin-right: 1.5rem;
+                font-size: 10px;
+                font-weight: 600;
+                cursor: pointer;
+                margin-bottom: 0;
+                line-height: 1.5;
+            }
+            p {
+                margin-bottom: 0;
+                color: #f44336;
+            }
+        }
+    }
+
+
+    ::-webkit-scrollbar-track {
+        border-radius: 8px !important;
+    }
+    ::-webkit-scrollbar-thumb {
+        border-radius: 8px !important;
+    }
+
+}
+
+.dashboard {
+
+    .mat-option {
+        &.searchPage {
+            padding: 0 1.5rem;
+        }
+        padding: 0 3rem;
+        .mat-option-text {
+            .optionLayout {
+                justify-content: space-between;
+
+                &.f-10 {
+                    font-size: 0.75rem;
+                    color: var(--n80);
+                }
+
+                &:hover {
+                    &.f-10 {
+                        color: var(--n0);
+                    }
+                }
+            }
+            .d-flex {
+                display: flex;
+                justify-content: space-between;
+            }
+            .noDataFound {
+                text-align: center;
+            }
+        }
+    }
+
+    &.mat-autocomplete-panel {
+        max-height: 150px !important;
+        border-radius: 8px !important;
+    }
+}
+
+
+.mat-option:hover:not(.mat-option-disabled),
+.mat-option:focus:not(.mat-option-disabled),
+.mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled) {
+    background: #f44336;
+    color: white;
+}
+
+.multiDropDown {
+    .mat-option:hover:not(.mat-option-disabled),
+    .mat-option:focus:not(.mat-option-disabled),
+    .mat-option.mat-selected:not(.mat-option-multiple):not(.mat-option-disabled) {
+        background: transparent;
+    }
+}
+
+.mat-select-panel.custom-select-panel.multiselect .mat-option.mat-active,
+.mat-select-panel.custom-select-panel.multiselect .mat-option:hover {
+    background: transparent;
+    color: black;
+    font-weight: 600;
+}
+
+.mat-select-panel.custom-select-panel.multiselect {
+    .mat-pseudo-checkbox-checked,
+    .mat-pseudo-checkbox-indeterminate {
+        background: #f44336;
+    }
+
+    .mat-option.mat-selected:not(.mat-option-disabled) {
+        color: black;
+        font-weight: 600;
+    }
+}
+
+
+.mat-form-field-appearance-outline .mat-select-arrow-wrapper {
+    transform: none;
+}
+
+.mat-select-value {
+    padding-top: 2px;
+}

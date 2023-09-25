@@ -1,0 +1,137 @@
+
+.otp_body {
+    overflow: hidden !important;
+    font-family: 'Open Sans' !important;
+    margin-top: 1.5rem !important;
+    margin-left: 1rem !important;
+    margin-right: 1rem !important
+}
+
+::ng-deep .otp-container {
+    height: 3.438rem !important;
+    button {
+        visibility: hidden;
+    }
+}
+
+.otp_title {
+    font-size: 1.875rem;
+    .header {
+        font-size: 1.25rem;
+        font-weight: 700;
+    }
+}
+
+.otp_msg {
+    margin-top: 1.5rem !important;
+    height: 4.125rem;
+    .t_otp_msg {
+        font-size: 0.875rem;
+        font-weight: 400;
+        color: var(--c100);
+        line-height: 1.54;
+        letter-spacing: normal;
+    }
+}
+
+.c_otp_msg {
+    font-size: 1.563rem;
+}
+
+.center_align {
+    text-align: center;
+}
+
+.left_align {
+    text-align: left !important;
+}
+
+.c_numer {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 1.187rem;
+    margin-right: 1.187rem;
+    span{
+        font-size: 1.125rem;
+        font-weight: 700;
+    }
+    .otp-timer{
+        padding-top: 0.3rem;
+        text-align: right;
+        font-size: 1rem !important
+    }
+}
+
+.input_box {
+    margin-top: 2.625rem !important;
+}
+
+.d_confirm{
+    width: 21.438rem;
+    height: 3rem;
+    font-size: 1rem;
+    line-height: 1.563rem;
+    font-weight: 700;
+    background-color: var(--n20);
+    border: none;
+}
+.e_confirm {
+    width: 21.438rem;
+    height: 3rem;
+    font-size: 1rem;
+    line-height: 1.563rem;
+    font-weight: 700;
+    color: var(--n0 );
+    background-color: var(--r100) !important;
+    border: hidden;
+}
+
+.enable_link {
+    color: var(--r100) !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+}
+
+.disable_link {
+    color: var(--n40);
+    pointer-events: none !important;
+    cursor: not-allowed !important
+}
+.error_msg {
+    color: var(--danger) !important;
+    text-align:  left !important;
+    font-weight: 400 !important;
+}
+
+
+@media (min-width: 20rem) and (max-width: 30rem)  {
+    .align {
+      text-align: left !important;
+    }
+}
+
+@media (min-width: 30.063rem) and (max-width: 48rem)  {
+    .align {
+      text-align: left !important;
+    }
+}
+
+
+@media (min-width: 47.938rem)  {
+    .align {
+      text-align: center !important;
+    }
+}
+
+
+.buttons {
+    button {
+        border-radius: 0.5rem !important;
+        cursor: pointer;
+    }
+    margin-top: 2.5rem !important;
+}
+
+.bodydiv {
+    margin-top: 2.5rem !important;
+}

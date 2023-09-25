@@ -1,0 +1,35 @@
+<div class="acknowledgment-container">
+    <ng-container *ngIf="(acknowledgment$ | async) as acknowledgment">
+        <mat-card>
+            <mat-card-title>
+            <div class="acknowledgment">
+                <mat-icon>check_circle</mat-icon>
+                <p class="text">Application Submitted!</p>
+            </div>
+            </mat-card-title>
+            <mat-card-content>
+                <div class="reference-num">
+                    <p class="ref">Reference Number</p>
+                    <p class="num">[Ref {{ acknowledgment.trxRefId }}]</p>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <div class="email">
+            Thank you for your application! <span *ngIf="acknowledgment.custEmail !== null">
+            We have sent the details to the following email: <strong>{{ acknowledgment.custEmail }}</strong></span>
+        </div>
+        <div class="follow-up">
+            <h3 class="heading">What’s Next?</h3>
+            <p class="sub-heading"><mat-icon>perm_identity</mat-icon>Follow-Up Calls</p>
+            <p class="content" *ngIf="trnxType === 'Q'">Your RM will contact you to review your risk profile and guide you in choosing the investment product that suits your needs.</p>
+            <p class="content" *ngIf="trnxType === 'S'">Your RM will contact you and you will receive a confirmation email once your fund has been confirmed by the fund house within <span class="txt-bold">3 working days.</span></p>
+        </div>
+        <div class="download">
+            <h3 class="heading">Register for a CIMB Clicks Account to View Your Investment</h3>
+            <p class="content">Download CIMB Clicks app to view your investment at your fingertips. </p>
+            <div class="download-btn">
+                <button mat-button class="btn">Download CIMB Clicks App</button>
+            </div>
+        </div>
+    </ng-container>
+</div>

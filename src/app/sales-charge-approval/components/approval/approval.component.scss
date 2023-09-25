@@ -1,0 +1,45 @@
+.main-Container {
+    margin-bottom: 15.125rem;
+    margin-top: 40px;
+    margin-left: 347px;
+    margin-right: 347px;
+}
+
+.sub-Container {
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.4;
+    color: #333739;
+   
+    
+}
+
+.content-Of-Body {
+    height: 120px;
+    font-size: 1rem;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #575a5c;
+    padding-bottom: 2rem;
+    padding-top: 27px;
+    p{
+        font-size: 16px;
+    }
+}
+
+.approvebtn {
+    background-color: #ff0000;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    height: 48px auto;
+    width: 200px auto;
+    padding: 0.75rem 2rem;
+    align-items: flex-end;
+    border: none;
+    line-height: 1.5;
+}
+.btn{
+    text-align: right;
+}

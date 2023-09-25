@@ -1,0 +1,16 @@
+[
+    {
+        "tncId": 1,
+        "tncName": "test-name1",
+        "tncOrder": 1,
+        "tncType": "U",
+        "tncUrl": "https://www.cimb.com.my/en/personal/privacy-policy.html"
+    },
+    {
+        "tncId": 2,
+        "tncName": "test-name",
+        "tncOrder": 2,
+        "tncType": "C",
+        "tncUrl": ""
+    }
+]

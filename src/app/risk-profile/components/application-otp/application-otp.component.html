@@ -1,0 +1,28 @@
+<div class="otp-container">
+    <div class="content">
+        <div class="otp-img">
+            <img src="assets/otp_img.svg" alt="">
+        </div>
+        <div class="otp-desc">
+            <p class="otp-num">To proceed, please request and enter your OTP. OTP will be sent to <span class="number">+60 xxxxx0900</span></p>
+        </div>
+        <div class="otp-desc-xl">
+            <p>To proceed, please click "Request TAC" and enter your TAC number.</p>
+            <p class="otp-num">TAC will be sent to <span class="number">+60 xxxxx0900</span></p>
+        </div>
+        <div class="otp-request-xl">
+            <p class="request-otp"><span (click)="requestOtp()" [ngClass]="requestSendOtp && declaration ? 'enable':'disable'" >Request TAC</span> <span class="timer" *ngIf="!requestSendOtp"><span *ngIf="minutes !== 0">{{minutes}}</span><span *ngIf="!(minutes === 0 || seconds === 0)">:</span><span *ngIf="seconds !== 0">{{seconds}}</span></span></p>
+        </div>
+
+    </div>
+    <div class="otp-input">
+       <ng-otp-input #ngOtpInput  (onInputChange)="onOtpChange($event)" *ngIf="showOtpComponent" [config]="configs"></ng-otp-input>
+       <p class="error-msg" *ngIf="invalid">Invalid OTP code. Please retry</p>
+    </div>
+    <div class="otp-request">
+        <p class="request-otp"><span (click)="requestOtp()" [ngClass]="requestSendOtp && declaration ? 'enable':'disable'" >Request OTP</span> <span class="timer" *ngIf="!requestSendOtp"><span *ngIf="minutes !== 0">{{minutes}}</span><span *ngIf="!(minutes === 0 || seconds === 0)">:</span><span *ngIf="seconds !== 0">{{seconds}}</span></span></p>
+    </div>
+    <div class="confirm-btn">
+        <button mat-button [disabled]="approvalOtp.length !== 6"  class="btn" (click)="confirmAndProceed()">Confirm & Proceed</button>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="close text-right">
+  <mat-icon [mat-dialog-close]="false">close</mat-icon>
+</div>
+
+<div class="content">
+  <h3>Decline Application</h3>
+  <p class="f-14">Please provide the reason(s) for declining.</p>
+
+  <div class="description bottom-radiuses">
+    <div class="label flex justificationTxtArea">
+      <div>
+        Comments
+      </div>
+      <div>
+        {{ reason.value.length }}/500
+      </div>
+    </div>
+    <mat-form-field appearance="outline" floatLabel="never">
+      <textarea matInput placeholder="Provide the reason(s) for declining" rows="6" [formControl]="reason"></textarea>
+    </mat-form-field>
+  </div>
+</div>
+
+<div class="buttons">
+  <button mat-raised-button color="warn" class="btn-text f-16 fw-700" [ngClass]="{'disabled': !reason.valid}" [disabled]="!reason.valid" (click)="declineSubmit()">Proceed to Decline</button>
+  <button mat-stroked-button color="acent" class="btn-text f-16 fw-700 cancel" [mat-dialog-close]="false">Cancel</button>
+</div>

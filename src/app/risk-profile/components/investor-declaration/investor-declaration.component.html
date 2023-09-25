@@ -1,0 +1,26 @@
+<div class="otp-decl">
+    <div class="dec-header">
+        <h3 class="title" [ngClass]="mat_header ? 'mat-title' : 'title-p' "><span *ngIf="!mat_header">{{ dialogData.title }} </span></h3><mat-icon mat-dialog-close>close</mat-icon>
+    </div>
+    <div class="dec-content" style='height: 75vh;'>
+        <ng-container *ngIf="dataSet">
+            <div *ngFor="let item of dataSet">
+                <ng-container *ngIf="item.type === 'HTML'">
+                    <div *ngFor="let HtmlItem of item.HTMLContent">
+                        <div class="{{item.class}}" [innerHtml]="HtmlItem.content">
+                        </div>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="item.type === 'mat-tab'">
+                    <div class="tabs-cimb">
+                        <mat-tab-group color="transparent">
+                            <mat-tab label="{{HtmlItem.name}}" *ngFor="let HtmlItem of item.HTMLContent">
+                                <div [innerHtml]="HtmlItem.content"></div>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </ng-container>
+            </div>
+        </ng-container>
+    </div>
+</div>

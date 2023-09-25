@@ -1,0 +1,340 @@
+.mainDiv {
+  background: var(--n5h);
+  padding: 1rem;
+  padding-bottom: 0rem !important;
+  margin: auto;
+  .customerName {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem !important;
+  }
+  .reviewConfirm {
+    margin-bottom: 1.5rem !important;
+    p {
+      margin-bottom: 0rem !important;
+    }
+  }
+
+  .referal {
+    box-shadow: 0px 2px 4px -2px rgba(24, 39, 75, 0.12),
+      0px 4px 4px -2px rgba(24, 39, 75, 0.08);
+    padding: 1.5rem 1rem;
+    background: var(--n100);
+    border-radius: 1rem;
+    .totalYear {
+      margin-bottom: 0rem !important;
+      .dvdr {
+        color: var(--n0) !important;
+      }
+      .np{
+        margin-bottom: 0rem !important;
+      }
+      .nav-Price {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.5rem;
+        padding: 0rem 0.5rem;
+        font-size: 0.75rem;
+        font-weight: 600;
+        .amountPrice {
+          color: var(--n0);
+          .amountsDev{
+            margin-right: 0.25rem;
+            font-weight: 700 !important;
+          }
+        }
+        .fSize{
+          font-size: 1.125rem !important;
+          .amd{
+            font-size: 0.625rem !important;
+            margin-right: 0.25rem !important;
+            font-weight: 700 !important;
+          }
+        }
+      }
+    }
+    .navYear {
+      color: var(--n0) !important;
+    }
+    .fSize {
+      color: var(--n0);
+    }
+  }
+
+  .refgroup {
+    box-shadow: 0px 2px 4px -2px rgba(24, 39, 75, 0.12),
+      0px 4px 4px -2px rgba(24, 39, 75, 0.08);
+    padding: 1rem 1rem 0rem;
+    background: var(--n0);
+    color: var(--n100);
+    border-radius: 1rem;
+    margin-bottom: 1.5rem;
+    .dividers {
+      color: var(--n20) !important;
+    }
+    .referenced {
+      div {
+        margin-bottom: 1rem;
+        display: flex;
+        p {
+          margin-bottom: 0rem;
+        }
+        .toasterpopup {
+          margin-top: -2px;
+          margin-left: 0.5rem;
+          margin-bottom: 0rem;
+          font-size: 0.625rem;
+          padding: 2px 0.75rem;
+          border-radius: 6px;
+          background: var(--s100);
+          color: var(--n0);
+          letter-spacing: 0.4px;
+          font-weight: 600;
+        }
+      }
+      label {
+        color: var(--n60);
+        font-size: 0.875rem;
+        font-weight: 400;
+      }
+      p {
+        color: var(--n100);
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      span {
+        color: var(--n60);
+        font-size: 0.75rem;
+      }
+    }
+    .ref {
+      padding: 0rem 0.5rem 1rem;
+    }
+    .ref2 {
+      p {
+        margin-bottom: 0rem;
+      }
+    }
+    .ref1 {
+      padding: 1rem 0.5rem !important;
+      p {
+        margin-bottom: 0rem;
+      }
+    }
+    .localEquity {
+      padding: 0rem 0.5rem 1.5rem;
+      .lequity {
+        border-left: 0.25rem solid var(--jg70);
+        padding-left: 0.5rem;
+        margin: 1.5rem 0rem;
+      }
+    }
+  }
+}
+
+.buttonGroup {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  .declined {
+    padding: 0rem 3rem;
+    border-radius: 0.5rem;
+    color: var(--r100);
+    border: solid 1px var(--r100);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .danger {
+    padding: 0rem 3rem;
+    background-color: var(--r100);
+    border: var(--r100);
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--n0);
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+}
+.riskDev {
+  flex-direction: column;
+}
+
+.colorSpace{
+  padding-left: 0.5rem;
+  margin: 1.5rem 0rem;
+}
+
+.dvdr {
+  margin: 1rem 0rem !important;
+}
+
+::ng-deep {
+  .refgroup {
+    .mat-divider {
+      border-top-color: var(--n20) !important;
+    }
+    .mat-accordion .mat-expansion-panel:first-of-type {
+      background: var(--n0) !important;
+      box-shadow: none;
+    }
+    .mat-expansion-indicator::after {
+      margin-bottom: 0.625rem !important;
+      color: var(--n100) !important;
+      margin-top: 6px;
+    }
+    .mat-expansion-indicator {
+      color: var(--n100);
+      margin-bottom: 1.125rem;
+      margin-right: 0.5rem;
+    }
+    .mat-expansion-panel-body {
+      padding: 0rem !important;
+    }
+  }
+  .cdk-overlay-backdrop.backdrop-modal.cdk-overlay-backdrop-showing {
+    background-color: #000000b8 !important;
+  }
+
+  .custom-dialog.document-dialog .mat-dialog-container {
+    border-radius: 16px !important;
+    margin-top: 64px !important;
+  }
+  .localEquity {
+    .mat-expansion-panel-header {
+      padding: 0rem !important;
+      height: auto !important;
+      align-items: self-start;
+    }
+  }
+  .totalYear {
+    .mat-divider {
+      border-top-color: var(--n0) !important;
+    }
+  }
+}
+
+.paraGroup {
+  padding-left: 0rem !important;
+  .main {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--c100);
+  }
+  .assetClass{
+    margin-top: 0.313rem;
+  }
+  .sub1 {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--r100);
+    margin-bottom: 0rem;
+  }
+  .main,
+  .sub{
+    margin-bottom: 0.312rem;
+  }
+  .sub,
+  .inv {
+    font-size: 0.625rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    color: var(--n60);
+  }
+}
+
+.riskDivision {
+  color: var(--r100);
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem !important;
+  .riskDev {
+    padding-top: 0.125rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 0.75rem;
+  }
+}
+.FD {
+  color: var(--r100);
+  text-decoration: underline;
+  margin-bottom: 1.063rem;
+  margin-top: 0.625rem;
+  cursor: pointer;
+}
+.totalYear {
+  .navPrice {
+    display: flex;
+    justify-content: space-between;
+    color: var(--n60);
+    .navYear {
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 1.125rem;
+    }
+    .navy{
+      font-weight: 600 !important;
+    }
+    .amountPrice {
+      margin-top: -0.25rem;
+      .amountsDev {
+        font-size: 0.625rem;
+        font-weight: 600;
+      }
+      .prices {
+        font-size: 0.875rem;
+        font-weight: 700;
+        margin-left: 0.25rem;
+      }
+    }
+  }
+  .prices {
+    margin-top: 0.688rem !important;
+    .fSize {
+      margin-top: 0rem !important;
+      font-weight: 700;
+      color: var(--n100);
+      .prices1 {
+        font-size: 1.125rem !important;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.uts-container {
+  font-weight: bold;
+  background-color: var(--n0);
+  font-size: 1.125rem !important;
+  line-height: 1.46;
+  padding: 0.75rem 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 0 4px 4px -2px rgba(24, 39, 75, 0.08),
+    0 2px 4px -2px rgba(24, 39, 75, 0.12);
+}
+
+// ::ng-deep .cdk-overlay-backdrop.backdrop-modal.cdk-overlay-backdrop-showing {
+//   background-color: #000000b8 !important;
+// }
+
+// ::ng-deep .custom-dialog.document-dialog .mat-dialog-container {
+//   border-radius: 16px !important;
+//   margin-top: 64px !important;
+// }
+
+// @media (min-width: 321px) and (max-width: 481px) {
+//   ::ng-deep .custom-dialog.document-dialog {
+//         width: 327px !important;
+//         height: 975px !important;
+
+//   }
+// }
+
+// @media (max-width: 320px) {
+//   ::ng-deep .custom-dialog.document-dialog {
+//     width: 295px !important;
+//     height: 1046px !important;
+//   }
+// }

@@ -1,0 +1,45 @@
+<div class="otp_body center_align">
+
+    <div class="row">
+      <div class="otp_title align">
+        <h3 class="header">Unit Trust Application</h3>
+      </div>
+
+      <div class="otp_msg align">
+        <span class="t_otp_msg">Enter the OTP code sent to your registered mobile number with the Bank to view your application.</span>
+      </div>
+    </div>
+
+    <div class="bodydiv center_align">
+      <div class="c_numer">
+        <span>
+          <span>+60 xxxxxxx6789</span>
+        </span>
+        <span>
+          <div [ngClass]="requestEnable ? 'enable_link' : 'disable_link'" (click)="requestOtp()">Request OTP</div>
+          <div class="otp-timer">
+            <span *ngIf="!requestEnable">
+              {{ minutes + ': ' + seconds }}
+            </span>
+          </div>
+        </span>
+      </div>
+      <div class="input_box">
+        <app-otp-input [otpValError]="otpError" (otpEntered)="otpEnter($event)"></app-otp-input>
+        <div style="text-align: left; margin-left: 20px; margin-top: 5px">
+          <span *ngIf="otpError" class="error_msg">
+            Invalid OTP code. Please retry
+          </span>
+        </div>
+
+      </div>
+
+      <div class="buttons">
+        <button mat-button *ngIf="!confirmEnable" type="button" class="btn btn-secondary btn-lg d_confirm" disabled>Confirm</button>
+        <button  mat-button *ngIf="confirmEnable" type="button" (click)="confirmOtp()" class="btn btn-danger e_confirm">Confirm</button>
+      </div>
+
+    </div>
+
+    </div>
+

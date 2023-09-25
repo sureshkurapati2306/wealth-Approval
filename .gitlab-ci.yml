@@ -1,0 +1,10 @@
+include:
+  - project: tcj/wealth/template-wl-pipelines
+    file: Angular.gitlab-ci.yml
+    ref: release-0.9
+
+variables:
+  IMAGE_TITLE: 'Customer Approval Apps'
+  IMAGE_DESCRIPTION: 'Customer Approval Application'
+  KUBE_SERVICE_NAME: 'approval-app'
+  KUBE_SERVICE_TITLE: 'Customer Approval Application'

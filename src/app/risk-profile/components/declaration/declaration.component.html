@@ -1,0 +1,48 @@
+<div class="dec">
+  <mat-icon>keyboard_arrow_left</mat-icon>
+  <p class="text">Declaration</p>
+</div>
+<div>
+  <p>To ensure you make an informed decision, please take your time to read the product highlight sheet, prospectus and do click on the link of the various documents before you proceed. </p>
+</div>
+<div class="declaration">
+  <mat-card class="custom-card">
+    <mat-card-title>
+      <mat-checkbox [formControl]="declaration">
+        <span class="title"> Investor’s Declaration and Acknowledgment/ Confirmation </span>
+      </mat-checkbox>
+    </mat-card-title>
+    <mat-divider></mat-divider>
+    <mat-card-content>
+      <p class="text-content">
+        By selecting the checkbox, I confirm that I have read, understood and agree to be bound by the following:
+      </p>
+      <div class="d-flex">
+        <div>(i)</div>
+        <div class="text">
+          <p>Investor’s Declaration and the Investor’s Suitability Assessment Declaration/ Risk Profiling terms and
+            conditions;</p>
+        </div>
+      </div>
+      <div class="d-flex mt-16">
+        <div>(ii)</div>
+        <div class="text">
+          CIMB Group Privacy Notice
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="custom-card1">
+    <mat-card-content>
+      <div class="d-flex">
+        <div>
+          <p class="otp-text">To proceed, please request and enter your OTP. OTP will be sent to +60 xxxxx0900</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <div class="button">
+    <button mat-raised-button color="warn" class="btn-text" (click)="submit()" [ngClass]="{'disabled': (!declaration.valid || !declaration.value)}" [disabled]="!declaration.valid">Confirm & Proceed</button>
+  </div>
+</div>

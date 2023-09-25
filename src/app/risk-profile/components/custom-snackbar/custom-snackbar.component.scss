@@ -1,0 +1,23 @@
+::ng-deep .cdk-overlay-pane>snack-bar-container {
+    margin-top: 80px !important;
+    width: 240px !important;
+    height: 60px;    
+}
+
+@media (max-width: 320px) {
+    ::ng-deep .cdk-overlay-pane>snack-bar-container {
+        margin-left: 37px !important;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 376px) {
+    ::ng-deep .cdk-overlay-pane>snack-bar-container {
+        margin-left: 65px !important;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 426px) {
+    ::ng-deep .cdk-overlay-pane>snack-bar-container {
+        margin-left: 90px !important;
+    }
+}
